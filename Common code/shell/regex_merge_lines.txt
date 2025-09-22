@@ -1,0 +1,56 @@
+Regex for merging lines if new line does not start with [a certain char] in Notepad++
+
+
+NODE                     EXPLANATION
+----------------------------------------------------------------------
+  \r?                      '\r' (carriage return) (optional (matching
+                           the most amount possible))
+----------------------------------------------------------------------
+  \n                       '\n' (newline)
+----------------------------------------------------------------------
+  (?!                      look ahead to see if there is not:
+----------------------------------------------------------------------
+    -                        '-'
+----------------------------------------------------------------------
+  )                        end of look-ahead
+----------------------------------------------------------------------
+
+\r?\n(?!2) # negative look-ahead
+# e. not starting with 2, it will locate all new lines not starting with 2
+
+\r?\n(?=\)) starting with )
+\r?\n(?=[a-zA-Z]) starting with characters
+
+CTRL + H to replace with space, it will merge break lines
+
+
+in comparison
+\r?\n(?=2019) # positive look-ahead
+
+
+multiple logics examples:
+OR: (\r?\n(?!268)|\r?\n(?!269)|\r?\n(?!270)|\r?\n(?!271))
+AND: (\r?\n(?!27))(\r?\n(?!28))
+
+\r?\n(?!(^[2][7-8][0-9]{6}$)): line not starting with 2 followed by 7 or 8 on position 2 
+and the rest 6 digits can be anything from 0-9, but for large datasets, it takes very long to scan and fix
+
+\r?\n(?=27)|\r?\n(?=26)|\r?\n(?=25)|\r?\n(?=24)|\r?\n(?=23)|\r?\n(?=22)|\r?\n(?=21)|\r?\n(?=20)
+
+\r?\n(?=2. )|\r?\n(?=2-)|\r?\n(?=2hrs)|\r?\n(?=2 )|\r?\n(?=2.5%)|\r?\n(?=2off)
+
+\r?\n(?!2)
+
+|undefined|
+
+fix 2 extra delimiter manually first
+
+fix 1 extra delimiter using script
+
+289-973-61758728634448
+289-973-61725928634588
+289-973-61758728634524
+289-973-61725928634549
+
+
+

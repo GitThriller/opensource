@@ -1,0 +1,11 @@
+(.*B/Fwd.*) locate content of the line
+
+^(?:[\t ]*(?:\r?\n|\r))+
+
+^\h+ select space at the beginning of each line
+
+
+GLENCORE:
+(.*---------.*)|(.*Req.By: HENNESSY,RODNEY.*)|(.*Run on: 16/06/21.*)|(.*Version:.*)|(.*General Ledger Accounts.*)|(.*Cost Centre/Exp Element Accounts.*)|(.*Total .*)|(.*Other Accounts  .*)|(.*Currency USD  US DOLLARS
+                         .*)
+

@@ -1,0 +1,23 @@
+﻿Set-Location ""
+
+$filePath = Get-ChildItem "" -Filter *.txt
+
+Foreach ($File in $filePath) 
+	{
+    		$rowcount = @(Get-Content $File).length
+
+    		Write-Host $rowcount
+	}
+
+
+
+#Use the below to pull through filename also
+#{
+#Get-Content $File| Measure-Object -Line
+#$File.Name
+#}
+
+
+#WW:
+#WHEN THE LINE GOT CUT OFF, USE THIS:
+#PS Microsoft.PowerShell.Core\FileSystem::\\ausyd0816\edc$\AAAnalytics\myAnalytics\Support\Data Services\4655 Proline\1 Original data> Get-Content "gltranss.txt"| Measure-Object -Line

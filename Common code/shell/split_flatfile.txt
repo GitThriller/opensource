@@ -1,0 +1,30 @@
+$sourceFile = "c:\xxx.csv"
+$partNumber = 1
+$batchSize = 500000
+$pathAndFilename = "c:\xxx part $partNumber file.csv"
+
+[System.Text.Encoding]$enc = [System.Text.Encoding]::GetEncoding(65001)  # utf8 this one
+
+$fs=New-Object System.IO.FileStream ($sourceFile,"OpenOrCreate", "Read", "ReadWrite",8,"None") 
+$streamIn=New-Object System.IO.StreamReader($fs, $enc)
+$streamout = new-object System.IO.StreamWriter $pathAndFilename
+
+$line = $streamIn.readline()
+$counter = 0
+while ($line -ne $null)
+{
+    $streamout.writeline($line)
+    $counter +=1
+    if ($counter -eq $batchsize)
+    {
+        $partNumber+=1
+        $counter =0
+        $streamOut.close()
+        $pathAndFilename = "c:\xxx part $partNumber file.csv"
+        $streamout = new-object System.IO.StreamWriter $pathAndFilename
+
+    }
+    $line = $streamIn.readline()
+}
+$streamin.close()
+$streamout.close()

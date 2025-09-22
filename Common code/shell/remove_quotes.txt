@@ -1,0 +1,16 @@
+﻿# Change your path and filename for the input and output files
+$InFoldername = "C:\Users\ele\Downloads\..."
+$OutFoldername = "C:\Users\ele\Downloads\...\"
+
+foreach ($file in get-childitem $InFoldername){
+    $tmpOutFileWriter = [IO.File]::CreateText($OutFoldername + $file.Name)
+
+    foreach ($line in [IO.File]::ReadLines($file.FullName)) {
+      $tmpOutFileWriter.WriteLine(
+        $line.Replace('"',' '))
+    }
+    $tmpOutFileWriter.Dispose()
+
+}
+
+

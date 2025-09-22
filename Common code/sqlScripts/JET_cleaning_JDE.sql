@@ -1,0 +1,154 @@
+-- run DT_DIYA_PACKAGE_DATA_CLEANSING_2018 database
+USE DT_DIYA_PACKAGE_DATA_CLEANSING_2018
+GO
+
+-------------------------------------
+---		Pre-clean Stage		---
+-------------------------------------
+
+-- overview data
+SELECT TOP 100 *
+FROM [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL]
+
+SELECT TOP 100 *
+FROM [0000].[RAW_ENTITY_HEADER_JUL_DEC_DATE_NAME-INITIAL]
+
+SELECT TOP 100 *
+FROM [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL]
+
+SELECT TOP 100 *
+FROM [0000].[RAW_ENTITY_BATCH_DATE_NAME-INITIAL]
+
+SELECT  *
+FROM [0000].[RAW_ENTITY_FLEX_DATE_NAME-INITIAL]
+
+-- row count
+SELECT COUNT(*)
+FROM [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL] -- 5,206,438 matching with uploaded raw data
+
+SELECT COUNT(*)
+FROM [0000].[RAW_ENTITY_HEADER_JUL_DEC_DATE_NAME-INITIAL] -- 1,228,290 matching with uploaded raw data
+
+SELECT COUNT(*)
+FROM [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL] -- 267,412 matching with uploaded raw data
+
+
+SELECT COUNT(*)
+FROM [0000].[RAW_ENTITY_BATCH_DATE_NAME-INITIAL] -- 8740 matching with uploaded raw data
+
+SELECT COUNT(*)
+FROM [0000].[RAW_ENTITY_FLEX_DATE_NAME-INITIAL] -- 7969 matching with uploaded raw data
+
+-- check JE_HEADER_ID mismatch b/w header and line tables
+SELECT * 
+FROM [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL] AS RALJD
+	FULL OUTER JOIN [0000].RAW_ENTITY_HEADER_JUL_DEC_DATE_NAME-INITIAL AS RAHJD
+		ON RAHJD.JE_HEADER_ID = RALJD.JE_HEADER_ID
+WHERE RALJD.JE_HEADER_ID IS NULL OR RAHJD.JE_HEADER_ID IS NULL
+--2 rows in lines but not headers (dtt id 4919302 and 946040). They're blank so excluding
+
+--Checking mismatches of CODE_COMBINATION_ID
+SELECT * 
+FROM [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL] AS RALJD
+	FULL JOIN [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL] AS CODE
+		ON CODE.CODE_COMBINATION_ID = RALJD.CODE_COMBINATION_ID
+WHERE CODE.CODE_COMBINATION_ID  IS NULL OR RALJD.CODE_COMBINATION_ID IS NULL
+
+SELECT * 
+FROM [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL] AS RALJD
+	FULL JOIN [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL] AS CODE
+		ON CODE.CODE_COMBINATION_ID = RALJD.CODE_COMBINATION_ID
+WHERE CODE.CODE_COMBINATION_ID IS NULL
+--2 rows in lines but not CODE_COMBINATIONS (dtt id 4919302 and 946040). They're blank so excluding
+
+
+-- create EXP table
+IF OBJECT_ID('[0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]', 'U') IS NOT NULL
+	DROP TABLE [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]
+
+SELECT
+CAST(RALJD.ACCOUNTED_DR AS money) - CAST(RALJD.ACCOUNTED_CR AS money) AS [Amount],
+CAST(RALJD.[EFFECTIVE_DATE] AS date) [Date effective],
+CAST(RALJD.[CREATION_DATE] AS date) [Date posted],
+REPLACE(RTRIM(LTRIM(RAHJD.[NAME])),'"','') + '-'+ REPLACE(RTRIM(LTRIM(RALJD.[DESCRIPTION])),'"','') AS [Journal description],
+RTRIM(LTRIM(RALJD.[JE_HEADER_ID])) AS [Journal ID],
+RTRIM(LTRIM(RALJD.[JE_LINE_NUM])) AS [Journal line number],
+RTRIM(LTRIM(CODE.[SEGMENT3])) AS [GL Account],
+RTRIM(LTRIM(RAHJD.[JE_SOURCE])) AS [Document Type],
+RTRIM(LTRIM(RALJD.[CREATED_BY])) AS [Posting user]
+INTO [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]
+FROM [0000].[RAW_ENTITY_HEADER_JUL_DEC_DATE_NAME-INITIAL] AS RAHJD
+	INNER JOIN [0000].[RAW_ENTITY_LINES_JUL_DEC_DATE_NAME-INITIAL] AS RALJD
+		ON RAHJD.JE_HEADER_ID = RALJD.JE_HEADER_ID
+	LEFT JOIN [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL] AS CODE
+		ON CODE.CODE_COMBINATION_ID = RALJD.CODE_COMBINATION_ID
+--(5206436 rows affected)
+
+-- no duplicate code combinations 
+SELECT CODE_COMBINATION_ID, COUNT(*) FROM  [0000].[RAW_ENTITY_CODE_COMBINATIONS_DATE_NAME-INITIAL]
+GROUP BY CODE_COMBINATION_ID
+HAVING COUNT(*) > 1
+
+-- overview exp table
+SELECT *
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]
+
+
+-------------------------------------
+---		Post-clean Stage		---
+-------------------------------------
+
+-- row count
+SELECT COUNT(*) AS row_count
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]
+--matches with expectation
+
+-- Net to 0
+SELECT SUM(Amount)
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL] -- 0
+
+--Check each journal id nets
+SELECT exp.[Journal ID],
+	   SUM(Amount)
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL] exp
+GROUP BY exp.[Journal ID]
+HAVING SUM(Amount)<>0
+--All net to 0
+
+--Check for uniqueness
+SELECT exp.[Journal ID],
+	   exp.[Journal line number], 
+	   COUNT(*)
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL]  exp
+GROUP BY exp.[Journal ID],
+         exp.[Journal line number]
+HAVING COUNT(*)>1
+--All journal  line combinations are unique
+
+-- Date effective range
+SELECT *
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL] AS EAJD
+WHERE EAJD.[Date effective]  < '2019-07-01' OR EAJD.[Date effective] > '2019-12-31'
+-- 2 rows are outside requested time period
+
+--Document type
+SELECT DISTINCT EAJD.[Document type], 
+		'0' AS [Is standard document type],
+		COUNT(DISTINCT [Journal ID]) AS [Number of Journal IDs],
+		COUNT([Journal line number]) AS [Number of Journal Lines],
+		SUM(CONVERT(MONEY, Amount)) AS [Sum of Amount]
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL] AS EAJD
+GROUP BY [Document Type]
+ORDER BY [Document Type] ASC
+
+
+--Posting user
+SELECT DISTINCT EAJD.[Posting user],
+		'0' AS [Is system entry],
+		'0' AS [User Of Interest],
+		COUNT(DISTINCT [Journal ID]) AS [Number of Journal IDs],
+		COUNT([Journal line number]) AS [Number of Journal Lines],
+		SUM(CONVERT(MONEY, Amount)) AS [Sum of Amount]
+FROM [0000].[EXP_ENTITY_JUL_DEC_DATE_NAME-INITIAL] AS EAJD
+GROUP BY [Posting user]
+ORDER BY [Posting user] ASC
