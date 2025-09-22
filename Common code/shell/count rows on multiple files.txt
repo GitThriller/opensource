@@ -1,0 +1,10 @@
+Set-Location ""
+
+$filePath = Get-ChildItem "" -Filter *.txt
+
+Foreach ($File in $filePath) 
+	{
+    		$rowcount = @(Get-Content $File).length
+
+    		Write-Host $rowcount
+	}

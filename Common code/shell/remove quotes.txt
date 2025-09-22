@@ -1,0 +1,13 @@
+$InFoldername = ""
+$OutFoldername = ""
+
+foreach ($file in get-childitem $InFoldername){
+    $tmpOutFileWriter = [IO.File]::CreateText($OutFoldername + $file.Name)
+
+    foreach ($line in [IO.File]::ReadLines($file.FullName)) {
+      $tmpOutFileWriter.WriteLine(
+        $line.Replace('"',' '))
+    }
+    $tmpOutFileWriter.Dispose()
+
+}

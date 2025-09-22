@@ -1,16 +1,4 @@
 ﻿=====================================================================================
-locate content of the line
-(.*B/Fwd.*)
-=====================================================================================
-locate blank lines
-^(?:[\t ]*(?:\r?\n|\r))+
-=====================================================================================
-select space at the beginning of each line
-^\h+
-=====================================================================================
-remove leading spaces
-^\s+
-=====================================================================================
 Search for double quotes where they are not at the start or end of a line 
 and are not preceded by ", and not followed by ,"
 ([^\n](?<!",))(")((?!,")[^\n])
@@ -20,106 +8,9 @@ and are not preceded by ", and not followed by ,"
 \r?\n(?=\)) starting with )
 \r?\n(?=[a-zA-Z]) starting with characters
 =====================================================================================
-
-=====================================================================
-=====================================================================
-==Remove Quotes===
-# Change your path and filename for the input and output files
-$InFoldername = "C:\Users\ele\Downloads\..."
-$OutFoldername = "C:\Users\ele\Downloads\...\"
-
-foreach ($file in get-childitem $InFoldername){
-    $tmpOutFileWriter = [IO.File]::CreateText($OutFoldername + $file.Name)
-
-    foreach ($line in [IO.File]::ReadLines($file.FullName)) {
-      $tmpOutFileWriter.WriteLine(
-        $line.Replace('"',' '))
-    }
-    $tmpOutFileWriter.Dispose()
-
-}
-=====================================================================
-=====================================================================
-==Convert to CSV==
-$filePath = Get-ChildItem '' -Filter *.xlsx 
-
-foreach ($inFile in $filePath)
-{
-    $OutFile= $InFile.FullName.replace($InFile.Extension,'')
-    $Excel = new-object -ComObject 'Excel.Application'
-    $Excel.DisplayAlerts = $True
-    $Excel.Visible = $False
-    $WorkBook = $Excel.Workbooks.Open($InFile.FullName)
-
-        foreach ($Worksheet in $Workbook.Worksheets)
-        {
-            $Worksheet.Activate()
-            $Worksheet.SaveAs($OutFile+ '_' + $Worksheet.Name + '.csv', 6)
-        }
-
-    $WorkBook.Close($True)
-    $Excel.Quit()
-    [void][System.Runtime.Interopservices.Marshal]::ReleaseComObject($Excel)
-}
-=====================================================================
-=====================================================================
-==Count Rows on a Single File==
-Get-Content '' | Measure-Object -Line
-=====================================================================
-=====================================================================
-==Count Rows on Multiple Files==
-Set-Location ""
-
-$filePath = Get-ChildItem "" -Filter *.txt
-
-Foreach ($File in $filePath) 
-	{
-    		$rowcount = @(Get-Content $File).length
-
-    		Write-Host $rowcount
-	}
-=====================================================================
-=====================================================================
-==Extract First 1000 rows Data==
-Get-Content " " | select -First 1000 | Out-File " .csv"
-=====================================================================
-=====================================================================
 ==SSIS Upload==
 DTT_FILENAME
 DTT_ID INT IDENTITY(1,1),
-=====================================================================
-=====================================================================
-==Split Flatfile==
-$sourceFile = "c:\xxx\*.csv"
-$partNumber = 1
-$batchSize = 500000
-$pathAndFilename = "c:\xxx\filename_$partNumber.csv"
-
-[System.Text.Encoding]$enc = [System.Text.Encoding]::GetEncoding(65001)  # utf8 this one
-
-$fs=New-Object System.IO.FileStream ($sourceFile,"OpenOrCreate", "Read", "ReadWrite",8,"None") 
-$streamIn=New-Object System.IO.StreamReader($fs, $enc)
-$streamout = new-object System.IO.StreamWriter $pathAndFilename
-
-$line = $streamIn.readline()
-$counter = 0
-while ($line -ne $null)
-{
-    $streamout.writeline($line)
-    $counter +=1
-    if ($counter -eq $batchsize)
-    {
-        $partNumber+=1
-        $counter =0
-        $streamOut.close()
-        $pathAndFilename = "c:\xxx\filename_$partNumber.csv"
-        $streamout = new-object System.IO.StreamWriter $pathAndFilename
-
-    }
-    $line = $streamIn.readline()
-}
-$streamin.close()
-$streamout.close()
 
 
 
