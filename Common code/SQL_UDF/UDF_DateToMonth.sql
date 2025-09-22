@@ -1,0 +1,26 @@
+IF object_id('[dbo].[UDF_DateToMonth]') is not NULL
+BEGIN
+   DROP FUNCTION [dbo].[UDF_DateToMonth]
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION UDF_DateToMonth
+(
+	@DATE DATETIME
+)
+RETURNS DATE
+AS
+/*
+Returns the date of the first of the month the input date is in.
+Created by Bryan Ye 110901
+*/
+BEGIN
+	DECLARE @MONTH DATETIME = CONVERT(DATETIME,CONVERT(CHAR(8),DATEPART(YEAR,@DATE)*10000 + DATEPART(MONTH,@DATE)*100 + 1),112)
+	RETURN @MONTH
+END
+GO

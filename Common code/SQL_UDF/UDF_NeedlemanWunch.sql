@@ -1,0 +1,11 @@
+GO
+IF OBJECT_ID('UDF_NeedlemanWunch') IS NOT NULL 
+BEGIN
+	DROP FUNCTION UDF_NeedlemanWunch
+END
+GO
+CREATE FUNCTION UDF_NeedlemanWunch(@firstword NVARCHAR(255), @secondword NVARCHAR(255))
+RETURNS FLOAT WITH EXECUTE AS CALLER
+AS 
+EXTERNAL NAME [TextFunctions].[StringMetrics].[NeedlemanWunch]
+GO

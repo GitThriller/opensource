@@ -1,0 +1,11 @@
+GO
+IF OBJECT_ID('UDF_SmithWaterman') IS NOT NULL 
+BEGIN
+	DROP FUNCTION UDF_SmithWaterman
+END
+GO
+CREATE FUNCTION UDF_SmithWaterman(@firstword NVARCHAR(255), @secondword NVARCHAR(255))
+RETURNS FLOAT WITH EXECUTE AS CALLER
+AS 
+EXTERNAL NAME [TextFunctions].[StringMetrics].[SmithWaterman]
+GO

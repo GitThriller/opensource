@@ -1,0 +1,11 @@
+GO
+IF OBJECT_ID('UDF_Levenstein') IS NOT NULL 
+BEGIN
+	DROP FUNCTION UDF_Levenstein
+END
+GO
+CREATE FUNCTION UDF_Levenstein(@firstword NVARCHAR(255), @secondword NVARCHAR(255))
+RETURNS FLOAT WITH EXECUTE AS CALLER
+AS 
+EXTERNAL NAME [TextFunctions].[StringMetrics].[Levenstein]
+GO

@@ -1,0 +1,22 @@
+IF OBJECT_ID('UDF_DaysInYear') IS NOT NULL
+BEGIN
+Drop FUNCTION UDF_DaysInYear
+END
+
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION UDF_DaysInYear(@YEAR CHAR(4))
+RETURNS FLOAT
+AS
+/*
+Returns 365 or 366 based on whether it is a leap year
+Created by Bryan Ye 121217
+*/
+BEGIN
+	RETURN DATEPART(DY,@YEAR+'-12-31')
+END
+GO

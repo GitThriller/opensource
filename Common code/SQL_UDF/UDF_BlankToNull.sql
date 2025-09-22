@@ -1,0 +1,21 @@
+IF object_id('[dbo].[UDF_BlankToNull]') is not NULL
+BEGIN
+   DROP FUNCTION [dbo].[UDF_BlankToNull]
+END
+
+GO
+SET ANSI_NULLS OFF
+GO
+SET QUOTED_IDENTIFIER OFF
+GO
+CREATE FUNCTION UDF_BlankToNull(@String AS VARCHAR(MAX))
+RETURNS VARCHAR(MAX)
+/*
+Converts blanks into NULL
+Created by Bryan Ye 140313
+*/
+AS
+BEGIN
+RETURN CASE WHEN @String <> '' THEN RTRIM(LTRIM(@String)) END
+END
+GO
