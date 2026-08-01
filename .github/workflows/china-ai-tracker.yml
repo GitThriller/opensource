@@ -63,7 +63,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+      # enablement turns Pages on via the API using this job's own token, so
+      # the site does not need switching on by hand in Settings first.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - run: npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
