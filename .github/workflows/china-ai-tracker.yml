@@ -1,0 +1,73 @@
+name: China AI Tracker — Daily Update
+
+# Lives at the repo root because GitHub Actions only reads .github/workflows/
+# from there; a nested copy inside the project folder is never picked up.
+# Everything below therefore runs inside china-ai-tracker-auto/ explicitly.
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # UTC 22:00 = 北京时间 06:00
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'china-ai-tracker-auto/**'
+      - '.github/workflows/china-ai-tracker.yml'
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: china-ai-tracker-auto
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests feedparser
+      - name: Refresh data
+        env:
+          # Optional. Without it the benchmark numbers stay on the curated
+          # snapshot and the page says so. Add via Settings → Secrets → Actions.
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+        run: python scripts/fetch_data.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/data/
+          git diff --cached --quiet || (git commit -m "China AI tracker: refresh data $(date +%Y-%m-%d)" && git push)
+
+  build-deploy:
+    needs: update-data
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}   # pick up the data commit from the job above
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/configure-pages@v5
+      - run: npm install
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: china-ai-tracker-auto/build
+      - id: deployment
+        uses: actions/deploy-pages@v4
