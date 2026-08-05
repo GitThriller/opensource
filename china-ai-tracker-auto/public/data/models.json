@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-04T23:06:33.038075+00:00",
+    "generated_at": "2026-08-05T23:04:54.342571+00:00",
     "benchmarks": {
       "live": false,
       "note": "AA_API_KEY not set",
@@ -11,14 +11,12 @@
       "live": true,
       "sources": [
         "量子位",
-        "雷锋网",
-        "36氪"
+        "雷锋网"
       ]
     },
     "sources": [
       "量子位",
-      "雷锋网",
-      "36氪"
+      "雷锋网"
     ]
   },
   "models": [
@@ -286,94 +284,64 @@
   ],
   "news": [
     {
-      "title": "开源版Claude Science来了！零依赖、MIT协议，内置30+项科研Skills",
-      "link": "https://www.qbitai.com/2026/08/466386.html",
+      "title": "别再吹AI生图了，不能图层编辑的AI都是“画饼”",
+      "link": "https://www.qbitai.com/2026/08/467034.html",
       "source": "量子位",
-      "published": "Tue, 04 Aug 2026 13:14:27 +0000"
+      "published": "Wed, 05 Aug 2026 14:09:18 +0000"
     },
     {
-      "title": "数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”",
-      "link": "https://www.qbitai.com/2026/08/465792.html",
+      "title": "等等，MiniMax H3不是刚发布吗？怎么就卷到几分钱的价格了……",
+      "link": "https://www.qbitai.com/2026/08/467036.html",
       "source": "量子位",
-      "published": "Tue, 04 Aug 2026 09:22:46 +0000"
+      "published": "Wed, 05 Aug 2026 13:47:51 +0000"
     },
     {
-      "title": "开发者苦 “造轮子” 久矣，HarmonyOS 7 正在抹平系统能力的接入鸿沟",
-      "link": "https://www.qbitai.com/2026/08/466262.html",
+      "title": "又一家AI基金暴雷了",
+      "link": "https://www.qbitai.com/2026/08/467001.html",
       "source": "量子位",
-      "published": "Tue, 04 Aug 2026 09:18:08 +0000"
+      "published": "Wed, 05 Aug 2026 12:43:18 +0000"
     },
     {
-      "title": "OpenAI天价网红公关活动，捅马蜂窝了",
-      "link": "https://www.qbitai.com/2026/08/466032.html",
+      "title": "淘天开启2027届应届生招聘：AI技术类岗位占比超9成",
+      "link": "https://www.qbitai.com/2026/08/466998.html",
       "source": "量子位",
-      "published": "Tue, 04 Aug 2026 09:13:57 +0000"
+      "published": "Wed, 05 Aug 2026 09:38:49 +0000"
     },
     {
-      "title": "腾讯混元Hy ASR 3.0 preview：让语音识别理解上下文",
-      "link": "https://www.qbitai.com/2026/08/465973.html",
+      "title": "114B参数、6B激活，Sand.ai刚刚开源全球首个千亿MoE视频生成模型",
+      "link": "https://www.qbitai.com/2026/08/466847.html",
       "source": "量子位",
-      "published": "Tue, 04 Aug 2026 08:58:21 +0000"
+      "published": "Wed, 05 Aug 2026 07:05:41 +0000"
     },
     {
-      "title": "超400万人在灵光App“手搓”AI应用，加速AI原生创作者生态形成",
-      "link": "https://www.leiphone.com/category/industrynews/dyX3xfFAHdLseQIF.html",
+      "title": "MiniMax H3 视频模型登顶开源社区第一，定义视频模型领域“斩杀线”",
+      "link": "https://www.leiphone.com/category/industrynews/aiUMBoeUYbi8fX4x.html",
       "source": "雷锋网",
-      "published": "Tue, 04 Aug 2026 20:20:00 +0800"
+      "published": "Wed, 05 Aug 2026 19:20:00 +0800"
     },
     {
-      "title": "算力筑基 智云赋能 | 仪电智算全力护航全国青少年人工智能大赛决赛",
-      "link": "https://www.leiphone.com/category/industrynews/375yKWm6UC8cJpE0.html",
+      "title": "尊界时代旗舰MPV正式上市，全国展车现已到店，售价64.8万元起",
+      "link": "https://www.leiphone.com/category/industrynews/QFyXW6c55NAYahi7.html",
       "source": "雷锋网",
-      "published": "Tue, 04 Aug 2026 19:24:00 +0800"
+      "published": "Wed, 05 Aug 2026 19:02:00 +0800"
     },
     {
-      "title": "参数内卷的尽头，泳池机器人在等待一次范式转移",
-      "link": "https://www.leiphone.com/category/robot/7Caqen8YIzrPTVj1.html",
+      "title": "华为WATCH GT 7系列正式发布，延续颜值天花板基因，运动健康体验再进阶",
+      "link": "https://www.leiphone.com/category/industrynews/LoiYc9ormyfo7FHZ.html",
       "source": "雷锋网",
-      "published": "Tue, 04 Aug 2026 18:00:00 +0800"
+      "published": "Wed, 05 Aug 2026 17:41:00 +0800"
     },
     {
-      "title": "发布当日，海外主流AI平台纷纷接入阿里Qwen3.8",
-      "link": "https://www.leiphone.com/category/industrynews/Ufuyq9sSvBlkp2Ix.html",
+      "title": "越疆具身全栖机器人让陪伴从“听见”升级为“看见”和“做到”",
+      "link": "https://www.leiphone.com/category/ai/HeZOqCaleEb5REh4.html",
       "source": "雷锋网",
-      "published": "Tue, 04 Aug 2026 17:07:00 +0800"
+      "published": "Wed, 05 Aug 2026 16:20:00 +0800"
     },
     {
-      "title": "全球唯一易三方新手漂移模式：腾势Z9S让新手也能玩漂移",
-      "link": "https://www.leiphone.com/category/industrynews/MRwheN7BxhpW4TX4.html",
+      "title": "全球五大机器人展新增板块，为何从炫技转向赶考？｜WRC 2026",
+      "link": "https://www.leiphone.com/category/private/fNLpOtD2S0XnmuGP.html",
       "source": "雷锋网",
-      "published": "Tue, 04 Aug 2026 16:27:00 +0800"
-    },
-    {
-      "title": "“车企牌”电池相继上车，不只是PK宁德时代",
-      "link": "https://36kr.com/p/3925382191708552?f=rss",
-      "source": "36氪",
-      "published": "2026-08-04 23:46:22  +0800"
-    },
-    {
-      "title": "自研高性能分布式解决方案，「芯晓科技」将芯片电源签核周期从几周缩短至几天 | 水下项目",
-      "link": "https://36kr.com/p/3925067918227591?f=rss",
-      "source": "36氪",
-      "published": "2026-08-04 18:27:21  +0800"
-    },
-    {
-      "title": "从追番到下单，国风IP正在重塑硬核数码消费",
-      "link": "https://36kr.com/p/3925017067862409?f=rss",
-      "source": "36氪",
-      "published": "2026-08-04 17:38:53  +0800"
-    },
-    {
-      "title": "一层“布”涨价270%之后，投资机构用数亿元投票玻璃基板，巽霖科技完成近2亿元B轮融资",
-      "link": "https://36kr.com/p/3924953058605444?f=rss",
-      "source": "36氪",
-      "published": "2026-08-04 16:31:59  +0800"
-    },
-    {
-      "title": "东山精密涨停背后：36氪企业全情报捕捉市场机会",
-      "link": "https://36kr.com/p/3924913931679877?f=rss",
-      "source": "36氪",
-      "published": "2026-08-04 16:18:21  +0800"
+      "published": "Wed, 05 Aug 2026 16:18:00 +0800"
     }
   ]
 }
