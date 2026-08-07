@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-05T23:04:54.342571+00:00",
+    "generated_at": "2026-08-07T01:31:33.819445+00:00",
     "benchmarks": {
       "live": false,
       "note": "AA_API_KEY not set",
@@ -284,64 +284,64 @@
   ],
   "news": [
     {
-      "title": "别再吹AI生图了，不能图层编辑的AI都是“画饼”",
-      "link": "https://www.qbitai.com/2026/08/467034.html",
+      "title": "Show me《指环王》！卡帕西强推大模型评测新基准",
+      "link": "https://www.qbitai.com/2026/08/467663.html",
       "source": "量子位",
-      "published": "Wed, 05 Aug 2026 14:09:18 +0000"
+      "published": "Fri, 07 Aug 2026 01:15:42 +0000"
     },
     {
-      "title": "等等，MiniMax H3不是刚发布吗？怎么就卷到几分钱的价格了……",
-      "link": "https://www.qbitai.com/2026/08/467036.html",
+      "title": "冲刺全球首个100万小时具身数据！三家国产公司，联手了",
+      "link": "https://www.qbitai.com/2026/08/467486.html",
       "source": "量子位",
-      "published": "Wed, 05 Aug 2026 13:47:51 +0000"
+      "published": "Fri, 07 Aug 2026 00:55:47 +0000"
     },
     {
-      "title": "又一家AI基金暴雷了",
-      "link": "https://www.qbitai.com/2026/08/467001.html",
+      "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
+      "link": "https://www.qbitai.com/2026/08/467487.html",
       "source": "量子位",
-      "published": "Wed, 05 Aug 2026 12:43:18 +0000"
+      "published": "Fri, 07 Aug 2026 00:25:07 +0000"
     },
     {
-      "title": "淘天开启2027届应届生招聘：AI技术类岗位占比超9成",
-      "link": "https://www.qbitai.com/2026/08/466998.html",
+      "title": "美学升维，流畅突破：荣耀MagicOS11双架构重塑体验",
+      "link": "https://www.qbitai.com/2026/08/467478.html",
       "source": "量子位",
-      "published": "Wed, 05 Aug 2026 09:38:49 +0000"
+      "published": "Thu, 06 Aug 2026 09:58:21 +0000"
     },
     {
-      "title": "114B参数、6B激活，Sand.ai刚刚开源全球首个千亿MoE视频生成模型",
-      "link": "https://www.qbitai.com/2026/08/466847.html",
+      "title": "没有人靠段子永载GitHub，除非谷歌姐夫",
+      "link": "https://www.qbitai.com/2026/08/467447.html",
       "source": "量子位",
-      "published": "Wed, 05 Aug 2026 07:05:41 +0000"
+      "published": "Thu, 06 Aug 2026 08:02:45 +0000"
     },
     {
-      "title": "MiniMax H3 视频模型登顶开源社区第一，定义视频模型领域“斩杀线”",
-      "link": "https://www.leiphone.com/category/industrynews/aiUMBoeUYbi8fX4x.html",
+      "title": "GPT-Live 底层拆解：OpenAI 如何让 95% 的音频帧不再延迟",
+      "link": "https://www.leiphone.com/category/ai/zYdlF2GT2z5SbNLT.html",
       "source": "雷锋网",
-      "published": "Wed, 05 Aug 2026 19:20:00 +0800"
+      "published": "Thu, 06 Aug 2026 21:47:00 +0800"
     },
     {
-      "title": "尊界时代旗舰MPV正式上市，全国展车现已到店，售价64.8万元起",
-      "link": "https://www.leiphone.com/category/industrynews/QFyXW6c55NAYahi7.html",
+      "title": "苏神复盘 Kimi K3：896 个专家背后，藏着哪些关键技术取舍？",
+      "link": "https://www.leiphone.com/category/ai/1krGNVOmEZUQgc9w.html",
       "source": "雷锋网",
-      "published": "Wed, 05 Aug 2026 19:02:00 +0800"
+      "published": "Thu, 06 Aug 2026 21:45:00 +0800"
     },
     {
-      "title": "华为WATCH GT 7系列正式发布，延续颜值天花板基因，运动健康体验再进阶",
-      "link": "https://www.leiphone.com/category/industrynews/LoiYc9ormyfo7FHZ.html",
+      "title": "Jeff Dean 创业路演 PPT，惊现 34 位创始人，谷歌系人才占领半壁江山",
+      "link": "https://www.leiphone.com/category/ai/woyyD9TFUP2pnDOC.html",
       "source": "雷锋网",
-      "published": "Wed, 05 Aug 2026 17:41:00 +0800"
+      "published": "Thu, 06 Aug 2026 21:40:00 +0800"
     },
     {
-      "title": "越疆具身全栖机器人让陪伴从“听见”升级为“看见”和“做到”",
-      "link": "https://www.leiphone.com/category/ai/HeZOqCaleEb5REh4.html",
+      "title": "频发高温故障！特斯拉FSD升级事故，看清中美智驾监管根本差异",
+      "link": "https://www.leiphone.com/category/industrynews/ZpRxn4ogBqvkrTiE.html",
       "source": "雷锋网",
-      "published": "Wed, 05 Aug 2026 16:20:00 +0800"
+      "published": "Thu, 06 Aug 2026 20:29:00 +0800"
     },
     {
-      "title": "全球五大机器人展新增板块，为何从炫技转向赶考？｜WRC 2026",
-      "link": "https://www.leiphone.com/category/private/fNLpOtD2S0XnmuGP.html",
+      "title": "黎曼动力携手光轮智能与诺亦腾机器人，剑指2026年百万小时具身智能数据建设",
+      "link": "https://www.leiphone.com/category/industrynews/8FCGhggf0AxRU8Pa.html",
       "source": "雷锋网",
-      "published": "Wed, 05 Aug 2026 16:18:00 +0800"
+      "published": "Thu, 06 Aug 2026 20:16:00 +0800"
     }
   ]
 }
