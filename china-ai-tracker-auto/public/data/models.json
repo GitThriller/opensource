@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-07T01:31:33.819445+00:00",
+    "generated_at": "2026-08-07T22:41:19.244266+00:00",
     "benchmarks": {
       "live": false,
       "note": "AA_API_KEY not set",
@@ -284,64 +284,64 @@
   ],
   "news": [
     {
-      "title": "Show me《指环王》！卡帕西强推大模型评测新基准",
-      "link": "https://www.qbitai.com/2026/08/467663.html",
+      "title": "阿里推出国内首个AI语音平台CosyVoice Studio，将语义理解融入语音能力",
+      "link": "https://www.qbitai.com/2026/08/468324.html",
       "source": "量子位",
-      "published": "Fri, 07 Aug 2026 01:15:42 +0000"
+      "published": "Fri, 07 Aug 2026 07:43:06 +0000"
     },
     {
-      "title": "冲刺全球首个100万小时具身数据！三家国产公司，联手了",
-      "link": "https://www.qbitai.com/2026/08/467486.html",
+      "title": "AI批量轰炸苹果bug赏金计划，审核团队已下线",
+      "link": "https://www.qbitai.com/2026/08/466738.html",
       "source": "量子位",
-      "published": "Fri, 07 Aug 2026 00:55:47 +0000"
+      "published": "Fri, 07 Aug 2026 06:21:05 +0000"
     },
     {
-      "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
-      "link": "https://www.qbitai.com/2026/08/467487.html",
+      "title": "openJiuwen发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
+      "link": "https://www.qbitai.com/2026/08/468305.html",
       "source": "量子位",
-      "published": "Fri, 07 Aug 2026 00:25:07 +0000"
+      "published": "Fri, 07 Aug 2026 06:18:51 +0000"
     },
     {
-      "title": "美学升维，流畅突破：荣耀MagicOS11双架构重塑体验",
-      "link": "https://www.qbitai.com/2026/08/467478.html",
+      "title": "AI圈功能狂卷，付费寥寥，Keep正在试一条新路",
+      "link": "https://www.qbitai.com/2026/08/467878.html",
       "source": "量子位",
-      "published": "Thu, 06 Aug 2026 09:58:21 +0000"
+      "published": "Fri, 07 Aug 2026 05:30:08 +0000"
     },
     {
-      "title": "没有人靠段子永载GitHub，除非谷歌姐夫",
-      "link": "https://www.qbitai.com/2026/08/467447.html",
+      "title": "阿里视频大模型Wan3.0开启公测：文档、ppt也能变视频",
+      "link": "https://www.qbitai.com/2026/08/467877.html",
       "source": "量子位",
-      "published": "Thu, 06 Aug 2026 08:02:45 +0000"
+      "published": "Fri, 07 Aug 2026 03:23:54 +0000"
     },
     {
-      "title": "GPT-Live 底层拆解：OpenAI 如何让 95% 的音频帧不再延迟",
-      "link": "https://www.leiphone.com/category/ai/zYdlF2GT2z5SbNLT.html",
+      "title": "赌注十万亿：字节拒绝走蒸馏捷径背后，张一鸣的长期主义有多狠？",
+      "link": "https://www.leiphone.com/category/yanxishe/JR3ppBP5VOxND55d.html",
       "source": "雷锋网",
-      "published": "Thu, 06 Aug 2026 21:47:00 +0800"
+      "published": "Fri, 07 Aug 2026 23:29:00 +0800"
     },
     {
-      "title": "苏神复盘 Kimi K3：896 个专家背后，藏着哪些关键技术取舍？",
-      "link": "https://www.leiphone.com/category/ai/1krGNVOmEZUQgc9w.html",
+      "title": "82 篇论文撑起的判断：IJCAI 凭什么是推理、规划、知识的「第一主场」",
+      "link": "https://www.leiphone.com/category/private/iME7Xg5tMwxIyZqU.html",
       "source": "雷锋网",
-      "published": "Thu, 06 Aug 2026 21:45:00 +0800"
+      "published": "Fri, 07 Aug 2026 18:29:00 +0800"
     },
     {
-      "title": "Jeff Dean 创业路演 PPT，惊现 34 位创始人，谷歌系人才占领半壁江山",
-      "link": "https://www.leiphone.com/category/ai/woyyD9TFUP2pnDOC.html",
+      "title": "美团王莆中：将AI融入家庭健康，助力建设“15分钟医疗圈”",
+      "link": "https://www.leiphone.com/category/industrynews/iGjt6GWE2NRHORMU.html",
       "source": "雷锋网",
-      "published": "Thu, 06 Aug 2026 21:40:00 +0800"
+      "published": "Fri, 07 Aug 2026 18:26:00 +0800"
     },
     {
-      "title": "频发高温故障！特斯拉FSD升级事故，看清中美智驾监管根本差异",
-      "link": "https://www.leiphone.com/category/industrynews/ZpRxn4ogBqvkrTiE.html",
+      "title": "延长20年！上汽集团与通用汽车签署合资续约协议",
+      "link": "https://www.leiphone.com/category/industrynews/n8L9ojfqMPqsvH2u.html",
       "source": "雷锋网",
-      "published": "Thu, 06 Aug 2026 20:29:00 +0800"
+      "published": "Fri, 07 Aug 2026 14:48:00 +0800"
     },
     {
-      "title": "黎曼动力携手光轮智能与诺亦腾机器人，剑指2026年百万小时具身智能数据建设",
-      "link": "https://www.leiphone.com/category/industrynews/8FCGhggf0AxRU8Pa.html",
+      "title": "IJCAI 2026 专访：机器人想学会人类动作，还差一座桥 | GAIR Paper 118",
+      "link": "https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html",
       "source": "雷锋网",
-      "published": "Thu, 06 Aug 2026 20:16:00 +0800"
+      "published": "Fri, 07 Aug 2026 14:09:00 +0800"
     }
   ]
 }
