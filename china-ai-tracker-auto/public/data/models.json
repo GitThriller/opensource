@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-08T22:33:56.067546+00:00",
+    "generated_at": "2026-08-09T22:35:42.206371+00:00",
     "benchmarks": {
       "live": false,
       "note": "AA_API_KEY not set",
@@ -284,34 +284,46 @@
   ],
   "news": [
     {
-      "title": "奥特曼的ChatGPT育儿大法，捅了马蜂窝",
-      "link": "https://www.qbitai.com/2026/08/468631.html",
+      "title": "180万刀，连亚马逊都烧不起Claude了",
+      "link": "https://www.qbitai.com/2026/08/469010.html",
       "source": "量子位",
-      "published": "Sat, 08 Aug 2026 07:57:35 +0000"
+      "published": "Sun, 09 Aug 2026 09:25:10 +0000"
     },
     {
-      "title": "中国NeoLab时刻：EverMind用3篇论文，交出全栈自进化首份答卷",
-      "link": "https://www.qbitai.com/2026/08/468555.html",
+      "title": "GPT-5.6和Fable联手，解决了一道悬了25年的数学难题",
+      "link": "https://www.qbitai.com/2026/08/468913.html",
       "source": "量子位",
-      "published": "Sat, 08 Aug 2026 07:56:09 +0000"
+      "published": "Sun, 09 Aug 2026 09:16:58 +0000"
     },
     {
-      "title": "Jeff Dean创业BP曝光，杨植麟也在上面！硅谷VC抢破头送钱",
-      "link": "https://www.qbitai.com/2026/08/468498.html",
+      "title": "当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI",
+      "link": "https://www.qbitai.com/2026/08/468782.html",
       "source": "量子位",
-      "published": "Sat, 08 Aug 2026 07:51:53 +0000"
+      "published": "Sun, 09 Aug 2026 03:40:25 +0000"
     },
     {
-      "title": "都学坏了！奥特曼亲手封锁最强模型Astra，重蹈Mythos覆辙",
-      "link": "https://www.qbitai.com/2026/08/468462.html",
+      "title": "Opus 5狂烧6.9亿token做游戏，GPT-5.6用5美元复刻了",
+      "link": "https://www.qbitai.com/2026/08/468766.html",
       "source": "量子位",
-      "published": "Sat, 08 Aug 2026 04:33:53 +0000"
+      "published": "Sun, 09 Aug 2026 03:25:00 +0000"
     },
     {
-      "title": "谷歌急了：AI核心员工全给我搬回硅谷坐班！",
-      "link": "https://www.qbitai.com/2026/08/468398.html",
+      "title": "爆料：哈萨比斯原本要和Jeff Dean一起走！",
+      "link": "https://www.qbitai.com/2026/08/468715.html",
       "source": "量子位",
-      "published": "Sat, 08 Aug 2026 02:45:02 +0000"
+      "published": "Sun, 09 Aug 2026 03:17:18 +0000"
+    },
+    {
+      "title": "百花奖短剧荣誉单元在京举办，15部作品获颁五项荣",
+      "link": "https://www.leiphone.com/category/industrynews/a3taIEu9XnS15mVJ.html",
+      "source": "雷锋网",
+      "published": "Sun, 09 Aug 2026 18:59:00 +0800"
+    },
+    {
+      "title": "摩尔线程：2026上半年营收17.36亿元，已超2025全年",
+      "link": "https://www.leiphone.com/category/chips/unD456FTBn9p8VyD.html",
+      "source": "雷锋网",
+      "published": "Sun, 09 Aug 2026 16:45:00 +0800"
     },
     {
       "title": "赌注十万亿：字节拒绝走蒸馏捷径背后，张一鸣的长期主义有多狠？",
@@ -330,18 +342,6 @@
       "link": "https://www.leiphone.com/category/industrynews/iGjt6GWE2NRHORMU.html",
       "source": "雷锋网",
       "published": "Fri, 07 Aug 2026 18:26:00 +0800"
-    },
-    {
-      "title": "延长20年！上汽集团与通用汽车签署合资续约协议",
-      "link": "https://www.leiphone.com/category/industrynews/n8L9ojfqMPqsvH2u.html",
-      "source": "雷锋网",
-      "published": "Fri, 07 Aug 2026 14:48:00 +0800"
-    },
-    {
-      "title": "IJCAI 2026 专访：机器人想学会人类动作，还差一座桥 | GAIR Paper 118",
-      "link": "https://www.leiphone.com/category/private/V2FQ6puH0pDdAKeI.html",
-      "source": "雷锋网",
-      "published": "Fri, 07 Aug 2026 14:09:00 +0800"
     }
   ]
 }
