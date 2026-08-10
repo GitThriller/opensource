@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-09T22:35:42.206371+00:00",
+    "generated_at": "2026-08-10T22:42:18.134357+00:00",
     "benchmarks": {
       "live": false,
       "note": "AA_API_KEY not set",
@@ -284,64 +284,64 @@
   ],
   "news": [
     {
-      "title": "180万刀，连亚马逊都烧不起Claude了",
-      "link": "https://www.qbitai.com/2026/08/469010.html",
+      "title": "AI倒查论文100年！99.2%的顶刊都有问题…",
+      "link": "https://www.qbitai.com/2026/08/469795.html",
       "source": "量子位",
-      "published": "Sun, 09 Aug 2026 09:25:10 +0000"
+      "published": "Mon, 10 Aug 2026 13:58:46 +0000"
     },
     {
-      "title": "GPT-5.6和Fable联手，解决了一道悬了25年的数学难题",
-      "link": "https://www.qbitai.com/2026/08/468913.html",
+      "title": "PDF当死，ARA该立！论文是时候Agent原生了",
+      "link": "https://www.qbitai.com/2026/08/469721.html",
       "source": "量子位",
-      "published": "Sun, 09 Aug 2026 09:16:58 +0000"
+      "published": "Mon, 10 Aug 2026 13:53:22 +0000"
     },
     {
-      "title": "当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI",
-      "link": "https://www.qbitai.com/2026/08/468782.html",
+      "title": "模型路线趋同之后，Physical AI的胜负手变了",
+      "link": "https://www.qbitai.com/2026/08/469544.html",
       "source": "量子位",
-      "published": "Sun, 09 Aug 2026 03:40:25 +0000"
+      "published": "Mon, 10 Aug 2026 09:20:50 +0000"
     },
     {
-      "title": "Opus 5狂烧6.9亿token做游戏，GPT-5.6用5美元复刻了",
-      "link": "https://www.qbitai.com/2026/08/468766.html",
+      "title": "对话郎咸朋：具身也会有“蔚小理”，靠融资实现不了物理AGI",
+      "link": "https://www.qbitai.com/2026/08/469520.html",
       "source": "量子位",
-      "published": "Sun, 09 Aug 2026 03:25:00 +0000"
+      "published": "Mon, 10 Aug 2026 06:58:58 +0000"
     },
     {
-      "title": "爆料：哈萨比斯原本要和Jeff Dean一起走！",
-      "link": "https://www.qbitai.com/2026/08/468715.html",
+      "title": "Claude Code倒计时5天默认自动模式，多花的钱A社自己掏",
+      "link": "https://www.qbitai.com/2026/08/469500.html",
       "source": "量子位",
-      "published": "Sun, 09 Aug 2026 03:17:18 +0000"
+      "published": "Mon, 10 Aug 2026 05:37:51 +0000"
     },
     {
-      "title": "百花奖短剧荣誉单元在京举办，15部作品获颁五项荣",
-      "link": "https://www.leiphone.com/category/industrynews/a3taIEu9XnS15mVJ.html",
+      "title": "8.99万元起，高性能智慧家轿2027款艾瑞泽8 PRO正式上市",
+      "link": "https://www.leiphone.com/category/industrynews/4AYm6hbg71IDngdw.html",
       "source": "雷锋网",
-      "published": "Sun, 09 Aug 2026 18:59:00 +0800"
+      "published": "Mon, 10 Aug 2026 23:34:00 +0800"
     },
     {
-      "title": "摩尔线程：2026上半年营收17.36亿元，已超2025全年",
-      "link": "https://www.leiphone.com/category/chips/unD456FTBn9p8VyD.html",
+      "title": "华为乾崑赋能，阿维塔07L重塑智美大五座豪华SUV标杆",
+      "link": "https://www.leiphone.com/category/industrynews/qlmdmJ611fZ7BrcQ.html",
       "source": "雷锋网",
-      "published": "Sun, 09 Aug 2026 16:45:00 +0800"
+      "published": "Mon, 10 Aug 2026 23:27:00 +0800"
     },
     {
-      "title": "赌注十万亿：字节拒绝走蒸馏捷径背后，张一鸣的长期主义有多狠？",
-      "link": "https://www.leiphone.com/category/yanxishe/JR3ppBP5VOxND55d.html",
+      "title": "阿里云将数据中心交付周期缩短至100天，全球领先",
+      "link": "https://www.leiphone.com/category/industrynews/mu3h6gC4Fx0CZl8K.html",
       "source": "雷锋网",
-      "published": "Fri, 07 Aug 2026 23:29:00 +0800"
+      "published": "Mon, 10 Aug 2026 16:33:00 +0800"
     },
     {
-      "title": "82 篇论文撑起的判断：IJCAI 凭什么是推理、规划、知识的「第一主场」",
-      "link": "https://www.leiphone.com/category/private/iME7Xg5tMwxIyZqU.html",
+      "title": "阿里云将数据中心交付周期缩短至100天，全球领先",
+      "link": "https://www.leiphone.com/category/industrynews/HloM0XQsbDuNjjZH.html",
       "source": "雷锋网",
-      "published": "Fri, 07 Aug 2026 18:29:00 +0800"
+      "published": "Mon, 10 Aug 2026 16:31:00 +0800"
     },
     {
-      "title": "美团王莆中：将AI融入家庭健康，助力建设“15分钟医疗圈”",
-      "link": "https://www.leiphone.com/category/industrynews/iGjt6GWE2NRHORMU.html",
+      "title": "理想汽车范皓宇：把产品打磨到极致，不问终点迎风向前",
+      "link": "https://www.leiphone.com/category/industrynews/y4r7kWai6uAZPcch.html",
       "source": "雷锋网",
-      "published": "Fri, 07 Aug 2026 18:26:00 +0800"
+      "published": "Mon, 10 Aug 2026 16:21:00 +0800"
     }
   ]
 }
